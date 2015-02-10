@@ -26,6 +26,7 @@
   $theme_settings['bootstrap_cdn'] = '3.3.2';
   $theme_settings['bootstrap_bootswatch'] = 'superhero';
   $theme_settings['bootstrap_navbar_position'] = 'static-top';
+  variable_set('theme_settings', $theme_settings);
 
   variable_set('jquery_update_jquery_version', '1.10');
 
