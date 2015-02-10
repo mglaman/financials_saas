@@ -5,5 +5,5 @@ core = 7.x
 exclusive = 1
 
 dependencies[] = financials
-dependencies[] = financials_blocks
+dependencies[] = financials_block
 dependencies[] = jquery_update
