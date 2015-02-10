@@ -1,0 +1,48 @@
+api: 2
+
+defaults:
+  projects:
+    subdir: contrib
+core: 7.x
+projects:
+#Core
+  drupal:
+    type: core
+    version: 7.34
+#Contrib
+  commerce:
+    version: 1.11
+  entity:
+    version: 1.5
+  jquery_update:
+    version: 2.5
+  libraries:
+    version: 2.2
+  navbar:
+    version: 1.5
+  navbar_awesome:
+    version: 1.x-dev
+  rules:
+    version: 2.8
+  xautoload:
+    version: 5.1
+#Theme
+  bootstrap:
+    version: 3.0
+#Custom
+  financials:
+    type: module
+    download:
+      type: git
+      branch: master
+      url: git@github.com:mglaman/financials.git
+#Libraries
+libraries:
+  backbone:
+    download:
+      type: get
+      url: https://github.com/jashkenas/backbone/archive/1.0.0.tar.gz
+  underscore:
+    download:
+      type: get
+      url: https://github.com/jashkenas/underscore/archive/1.5.2.zip
