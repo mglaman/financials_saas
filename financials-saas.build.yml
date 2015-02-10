@@ -2,8 +2,13 @@ api: 2
 core: 7.x
 
 projects:
-  type: profile
-  download:
-    type: git
-    url: git@github.com:mglaman/financials_saas.git
-    branch: master
+  #Core
+  drupal:
+    type: core
+    version: 7.34
+  financials_sass:
+    type: profile
+    download:
+      type: git
+      url: git@github.com:mglaman/financials_saas.git
+      branch: master

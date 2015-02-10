@@ -5,10 +5,6 @@ defaults:
     subdir: contrib
 core: 7.x
 projects:
-#Core
-  drupal:
-    type: core
-    version: 7.34
 #Contrib
   commerce:
     version: 1.11
