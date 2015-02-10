@@ -4,6 +4,7 @@ description = A budget thing.
 core = 7.x
 exclusive = 1
 
+dependencies[] = menu
 dependencies[] = financials
 dependencies[] = financials_block
 dependencies[] = jquery_update

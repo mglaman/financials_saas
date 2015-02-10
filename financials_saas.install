@@ -19,4 +19,15 @@
 
      // Allow visitor account creation with administrative approval.
   variable_set('user_register', USER_REGISTER_VISITORS_ADMINISTRATIVE_APPROVAL);
+
+  // Initialize the current theme settings.
+  $theme_default = variable_get('theme_default', 'bootstrap');
+  $theme_settings = variable_get('theme_settings', variable_get('theme_' . $theme_default . '_settings', array()));
+  $theme_settings['bootstrap_cdn'] = '3.3.2';
+  $theme_settings['bootstrap_bootswatch'] = 'superhero';
+  $theme_settings['bootstrap_navbar_position'] = 'static-top';
+
+  variable_set('jquery_update_jquery_version', '1.10');
+
+
  }
