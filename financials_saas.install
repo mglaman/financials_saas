@@ -13,7 +13,7 @@
      ->condition('name', 'bootstrap')
      ->execute();
    variable_set('theme_default', 'bootstrap');
-   variable_set('admin_theme', 'seven');
+   variable_set('admin_theme', 'bootstrap');
    variable_set('node_admin_theme', '0');
    variable_set('site_frontpage', 'user/login');
 
@@ -30,5 +30,19 @@
 
   variable_set('jquery_update_jquery_version', '1.10');
 
+   // Create a Home link in the main menu.
+   $item = array(
+     'link_title' => st('Budget'),
+     'link_path' => 'budget',
+     'menu_name' => 'main-menu',
+   );
+   menu_link_save($item);
 
+   // Create a Home link in the main menu.
+   $item = array(
+     'link_title' => st('Accounts'),
+     'link_path' => 'accounts',
+     'menu_name' => 'main-menu',
+   );
+   menu_link_save($item);
  }
