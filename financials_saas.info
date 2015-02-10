@@ -1,0 +1,9 @@
+name = Financials SaaS
+distribution_name = Financials SaaS
+description = A budget thing.
+core = 7.x
+exclusive = 1
+
+dependencies[] = financials
+dependencies[] = financials_blocks
+dependencies[] = jquery_update
