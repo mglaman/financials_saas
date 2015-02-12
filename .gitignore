@@ -5,6 +5,7 @@
 .sass-cache
 *.css.map
 
+libraries
 modules/contrib
 modules/custom/financials
 themes/contrib

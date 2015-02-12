@@ -46,6 +46,14 @@
    );
    menu_link_save($item);
 
+   // Create a Help link in the main menu.
+   $item = array(
+     'link_title' => st('Help'),
+     'link_path' => 'help',
+     'menu_name' => 'main-menu',
+   );
+   menu_link_save($item);
+
    variable_set('site_name', 'Who Needs a Budget?');
 
   financials_saas_provision_permissions();
@@ -60,4 +68,17 @@ function financials_saas_update_7000() {
   module_enable(array('libraries', 'financials_ctools'));
   variable_set('site_name', 'Who Needs a Budget?');
   financials_saas_provision_permissions();
+}
+
+/**
+ * Add help link.
+ */
+function financials_saas_update_7001() {
+  // Create a Help link in the main menu.
+  $item = array(
+    'link_title' => st('Help'),
+    'link_path' => 'help',
+    'menu_name' => 'main-menu',
+  );
+  menu_link_save($item);
 }

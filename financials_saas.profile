@@ -36,8 +36,41 @@ function financials_saas_libraries_info() {
     'files' => array(
       'php' => array('Spyc.php'),
     ),
-    'xautoload' => function($adapter) {$adapter->composerJson('composer.json');}
+    'xautoload' => function($adapter) {
+      /** @var \Drupal\xautoload\Adapter\LocalDirectoryAdapter $adapter */
+      $adapter->composerJson('composer.json');
+    }
+  );
+  $libraries['parsedown'] = array(
+    'name' => 'Parsedown',
+    'version' => '1.4.1',
+    'vendor url' => 'https://github.com/erusev/parsedown',
+    'download url' => 'https://github.com/erusev/parsedown/archive/master.zip',
+    'files' => array(
+      'php' => array('Parsedown.php'),
+    ),
+    'xautoload' => function($adapter) {
+      /** @var \Drupal\xautoload\Adapter\LocalDirectoryAdapter $adapter */
+      $adapter->composerJson('composer.json');
+    }
   );
 
   return $libraries;
+}
+
+/**
+ * Implements hook_menu().
+ */
+function financials_saas_menu() {
+  $items = array();
+  foreach (\Drupal\financials_saas\Help\HelpRouter::pages() as $key => $page) {
+    $items[$key] = array(
+      'title' => $page['title'],
+      'page callback' => '\Drupal\\financials_saas\\Help\\HelpRouter::load',
+      'page arguments' => array('\Drupal\\financials_saas\\Help\\' . $page['className']),
+      'access arguments' => array('access content'),
+      'menu_name' => 'navigation',
+    );
+  }
+  return $items;
 }

@@ -40,3 +40,9 @@ libraries:
       type: git
       url: git://github.com/mustangostang/spyc.git
       revision: eeb9f7c47e1457770d64c7fb1f3d4aabff52de4b
+  parsedown:
+    directory_name: parsedown
+    download:
+      type: git
+      url: https://github.com/erusev/parsedown.git
+      revision: 65116c3cb0953447eac742aa4ea5fc4aaaa22db9
