@@ -8,3 +8,4 @@ permissions:
   edit own finance_account content: true
   delete own finance_account content: true
   cancel account: true
+  financials add line item: true
