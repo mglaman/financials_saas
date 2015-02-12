@@ -1,0 +1,10 @@
+---
+# Provided by Core, present to ensure proper permissions.
+name: authenticated user
+weight: "1"
+permissions:
+  access content: true
+  create finance_account content: true
+  edit own finance_account content: true
+  delete own finance_account content: true
+  cancel account: true

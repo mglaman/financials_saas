@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\financials_saas\PermissionsHandler;
+
 /**
  * @file
  * Installation file for the Financials SaaS profile
@@ -45,4 +47,8 @@
      'menu_name' => 'main-menu',
    );
    menu_link_save($item);
+
+
+   $permissions_handler = new PermissionsHandler();
+   $permissions_handler->ensurePermissions();
  }

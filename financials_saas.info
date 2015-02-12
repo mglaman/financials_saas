@@ -5,6 +5,7 @@ core = 7.x
 exclusive = 1
 
 dependencies[] = menu
+dependencies[] = libraries
 dependencies[] = financials
-dependencies[] = financials_block
+dependencies[] = financials_ctools
 dependencies[] = jquery_update
