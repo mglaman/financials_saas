@@ -29,7 +29,6 @@ class PermissionsHandler {
    * Loads ACL configuration files to define platform roles and permissions.
    */
   public function __construct() {
-    //libraries_load('spyc');
     $this->path = drupal_get_path('profile', 'financials_saas') . '/config';
 
     $this->loadConfig('anonymous');
