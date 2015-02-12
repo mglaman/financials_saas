@@ -47,7 +47,7 @@ class PermissionsHandler {
     foreach ($this->getACL() as $roleName => $roleData) {
       $role = user_role_load_by_name($roleName);
       if ($role == false) {
-        $role = new stdClass();
+        $role = new \stdClass();
         $role->name = $roleName;
         $role->weight = $roleData['weight'];
         user_role_save($role);

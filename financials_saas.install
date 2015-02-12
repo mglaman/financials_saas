@@ -46,5 +46,18 @@
    );
    menu_link_save($item);
 
+   variable_set('site_name', 'Who Needs a Budget?');
+
   financials_saas_provision_permissions();
  }
+
+/**
+ * Update platform name, permissions.
+ */
+function financials_saas_update_7000() {
+  drupal_flush_all_caches();
+  libraries_load('spyc');
+  module_enable(array('libraries', 'financials_ctools'));
+  variable_set('site_name', 'Who Needs a Budget?');
+  financials_saas_provision_permissions();
+}
